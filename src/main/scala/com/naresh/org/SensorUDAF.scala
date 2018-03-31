@@ -61,6 +61,7 @@ object SensorUDAF
     //val explodedDF = sensordf.select($"dcname",explode($"source.sensor-igauge"))
     sensordf.createOrReplaceTempView("sensor")
     spark.sql("SELECT SUMPRODUCT(value) from sensor group by dcname").take(2)
+	val r="test"
 
   }
 
